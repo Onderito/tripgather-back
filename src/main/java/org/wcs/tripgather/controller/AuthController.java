@@ -99,8 +99,7 @@ public class AuthController {
                         "imageUrl", foundUser.getImageUrl(),
                         "gender", foundUser.getGender().toString(), // Convertir Enum en String
                         "bio", foundUser.getBio(),
-                        "country", foundUser.getCountry(),
-                        "birthDate", foundUser.getBirthDate() != null ? foundUser.getBirthDate().toString() : null
+                        "country", foundUser.getCountry()
                 ));
 
                 return ResponseEntity.ok(response);
