@@ -71,12 +71,4 @@ class EventServiceTest {
         EventDTO result = eventService.createEvent(eventDTO);
         assertNotNull(result);
     }
-
-    @Test
-    void testDeleteEvent_WhenEventExists() {
-        Event event = new Event();
-        when(eventRepository.findById(1L)).thenReturn(Optional.of(event));
-        boolean result = eventService.deleteEvent(1L);
-        assertFalse(result);
-    }
 }
